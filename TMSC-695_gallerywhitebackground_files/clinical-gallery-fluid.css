@@ -1,0 +1,531 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+#clinical-gallery-wrap {
+    background-color: rgba(0,0,0,1.00);
+}
+#clinical-gallery-wrap h2 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+#clinical-gallery-wrap h3 {
+    color: rgba(240,240,240,1.00);
+    margin-top: 0px;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+#clinical-gallery-wrap p {
+    color: rgba(225,225,225,1.00);
+    font-size: 16px;
+}
+#clinical-gallery-wrap .border-bottom{
+    border-bottom:2px solid rgba(30,30,30,1.00);
+}
+@media (max-width: 992px) {
+    #clinical-gallery-wrap h3 {
+        margin-bottom: 7px;
+    }
+    #clinical-gallery-wrap h2 {
+        font-size: 16px;
+    }
+    #clinical-gallery-wrap p {
+        color: rgba(225,225,225,1.00);
+        font-size: 14px;
+        line-height: 17px;
+    }
+}
+@media (max-width: 767px) {
+    #clinical-gallery-wrap h3 {
+        text-align:center;
+    }
+    #clinical-gallery-wrap h2 {
+        text-align:center;
+    }
+}
+#clinical-nav {
+    padding-bottom: 0px;
+    border-bottom: 1px solid rgb(0,0,0);
+    background-color: rgb(45,45,45);
+    padding-top: 15px;
+}
+.col-fw {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+#cat-tabs {
+    border: none;
+    padding: 0;
+    margin-bottom: 0 !important;
+}
+#cat-tabs li a {
+    padding: 15px 0px 25px 0px;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    color: rgb(180,180,180);
+    font-size: 14px;
+    font-weight: 600;
+
+    /* white-space: nowrap; */
+}
+#cat-tabs li a:hover,
+#cat-tabs li a:focus {
+    color: rgba(240,240,240,1.00);
+    border-bottom: 3px solid rgba(99,99,99,1.00);
+    padding-bottom: 22px;
+}
+#clinical-nav #cat-tabs li.active a {
+    font-weight: 600;
+
+    background-color: transparent;
+    color: rgb(207,20,43) !important;
+    border-bottom: 3px solid rgb(207,20,43) !important;
+    padding-bottom: 22px;
+}
+.clinical-section{
+    padding: 160px 0;
+    margin-bottom:-30px;
+}
+#cat-tabs .dropdown-menu {
+    background-color:rgb(207,20,43); 
+    margin-top:0;
+    min-width:173px;
+    padding:10px 0;
+}
+#cat-tabs .dropdown-menu li{
+    margin:0 !important;
+    padding:0 !important;
+    width:100%;
+}
+#cat-tabs .dropdown-menu li a{
+    color:white;
+    margin:0;
+    padding:10px 20px 10px 20px;
+    border:none;
+    width:100%;
+}
+#cat-tabs .dropdown-menu li a span{
+    font-size:80%;
+    opacity:.65;
+}
+#cat-tabs .dropdown-menu li a:hover{
+    border:none;
+    background-color:rgba(164,0,0,1.00);
+}
+@media (max-width: 1199px) {
+    #cat-tabs li a {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 767px) {
+    .clinical-thumbs .row {
+        margin-right: -5px;
+        margin-left: -5px;
+    }
+    .clinical-thumbs .col-xs-3 {
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+    .clinical-section{
+        padding: 30px 0 60px 0;
+    }
+
+}
+/*This class and DIV was removed, not needed.*/
+.clinical-display {
+    border: 1px solid rgba(40,40,40,1.00);
+}
+.clinical-thumbs a, .clinical-thumbs a:link, .clinical-thumbs a:visited {
+    margin-bottom: 30px;
+    display: block;
+    position: relative;
+    border: 1px solid rgba(40,40,40,1.00);
+    cursor: pointer;
+    width: auto;
+    height: auto;
+}
+.clinical-thumbs i {
+    position: absolute;
+    top: 37%;
+    left: 37%;
+    color: rgba(255,255,255,0.35);
+    text-shadow: 1px 1px 0 rgba(0,0,0,.9);
+    font-size: 28px;
+}
+.clinical-thumbs a span {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle; /*上下中央*/
+    width:82px;
+    height:82px;
+}
+
+.img-contain-thumb{
+    display: inline;
+    width:auto;
+    height:auto;
+}
+@media (max-width: 99999px) {
+    .clinical-thumbs a {
+        width: 84px;
+        height: 84px;
+    }
+
+    .clinical-thumbs a span {
+        width:82px;
+        height:82px;
+    }
+
+    .img-contain-thumb{
+        max-width:82px;
+        max-height:82px;
+    }
+
+}
+
+@media (max-width: 1199px) {
+    .clinical-thumbs a {
+        width: 67px;
+        height: 67px;
+    }
+    .clinical-thumbs a span {
+        width:65px;
+        height:65px;
+    }
+    .img-contain-thumb{
+        max-width:65px;
+        max-height:65px;
+    }
+
+}
+
+@media (max-width: 992px) {
+    .clinical-thumbs a {
+        width: 49px;
+        height: 49px;
+    }
+    .clinical-thumbs a span {
+        width:47px;
+        height:47px;
+    }
+    .img-contain-thumb{
+        max-width:47px;
+        max-height:47px;
+    }
+}
+
+@media (max-width: 767px) {
+    .clinical-thumbs a {
+        width: 84px;
+        height: 84px;
+    }
+    .clinical-thumbs a span {
+        width:82px;
+        height:82px;
+    }
+    .img-contain-thumb{
+        max-width:82px;
+        max-height:82px;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .clinical-thumbs i {
+        position: absolute;
+        top: 37%;
+        left: 37%;
+        color: rgba(255,255,255,0.35);
+        text-shadow: 1px 1px 0 rgba(0,0,0,.9);
+        font-size: 20px;
+    }
+}
+.clinical-thumbs a:hover, .clinical-thumbs a:active, .clinical-thumbs a:focus {
+    border: 1px solid rgba(80,80,80,1.00);
+}
+.clinical-thumbs a:hover i, .clinical-thumbs a:active i, .clinical-thumbs a:focus i {
+    color: white;
+}
+.clinical-thumbs a img {
+    opacity: .9;
+}
+.clinical-thumbs a:hover img {
+    opacity: 1;
+}
+.clinical-thumbs .thumb.active a {
+    border: 1px solid rgba(255,255,255,1.00);
+}
+.border-top-dark {
+    border-top: 1px solid rgba(30,30,30,1.00);
+}
+
+@media (max-width: 767px) {
+    .clinical-dispaly {
+        margin-bottom: 10px;
+    }
+    .clinical-thumbs a, .clinical-thumbs a:link, .clinical-thumbs a:visited {
+        margin-bottom: 10px;
+    }
+}
+#clinical-gallery-wrap .tablet-row {
+    margin-right: -5px;
+    margin-left: -5px;
+}
+#clinical-gallery-wrap .tablet-col {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+.clinical-dispaly {
+    margin-bottom: 10px;
+}
+.clinical-thumbs a, .clinical-thumbs a:link, .clinical-thumbs a:visited {
+    margin-bottom: 10px;
+}
+.btn-clinical-dropdown, .btn-clinical-dropdown:link, .btn-clinical-dropdown:visited {
+    background-color: rgba(50,50,50,1.00);
+    color: rgb(235,235,235) !important;
+    width: 100%;
+    border: none !important;
+    margin-bottom: 0 !important;
+    padding: 15px !important;
+}
+.btn-clinical-dropdown:hover, .btn-clinical-dropdown:active, .btn-clinical-dropdown:focus {
+    background-color: rgb(207,20,43);
+    color: white !important;
+    border: none !important;
+    outline: none !important;
+}
+#mobile-tabs-dropdown {
+    background-color: rgb(40,40,40);
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 0;
+    padding-top: 10px;
+    border-bottom: 1px solid rgba(79,79,79,1.00);
+}
+#mobile-tabs-dropdown li {
+    width: 48%;
+    margin: 1%;
+    float: left;
+}
+#mobile-tabs-dropdown li a, #mobile-tabs-dropdown li a:link, #mobile-tabs-dropdown li a:visited {
+    color: rgba(212,212,212,1.00);
+    padding: 10px 10px;
+    text-align: center;
+    border: 1px solid rgba(67,67,67,1.00);
+}
+#mobile-tabs-dropdown li a:hover, #mobile-tabs-dropdown li a:focus, #mobile-tabs-dropdown li a:active {
+    background-color: black;
+    color: white;
+    border: 1px solid rgba(67,67,67,1.00);
+}
+#mobile-tabs-dropdown li.active a {
+    background-color: rgb(207,20,43);
+    color: white;
+}
+.carousel-control {
+    top: 33%;
+    bottom: 33%;
+    left: 0;
+    width: 10%;
+    font-size: 16px;
+    color: #fff;
+    height: 33%;
+}
+.carousel-control.left {
+    background-image: none;
+}
+.carousel-control.right {
+    right: 0;
+    left: auto;
+    background-image: none;
+}
+.carousel-control:hover, .carousel-control:focus {
+    color: #fff;
+    text-decoration: none;
+    filter: alpha(opacity=90);
+    outline: 0;
+    opacity: .9;
+}
+.image-details {
+    border-top: 1px solid black;
+    margin-top: 10px;
+}
+/*Brightcove Overrides	*/
+body div.video-js {
+    width: 100% !important;
+    height: 100% !important;
+}
+.vjs-big-play-button {
+    display: none;
+}
+.vjs-social-embed-container {
+    display: none;
+}
+
+@media only screen and (max-width:1199px) {
+    .vjs-big-play-button {
+        display: block;
+    }
+}
+.vjs-social-title {
+    display: none;
+}
+.vjs-subtitles-button {
+    display: none;
+}
+.vjs-social-embed-code {
+    display: none;
+}
+.carousel-indicators {
+    position: static;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    width: auto;
+    padding-left: 0;
+    text-align: left;
+    list-style: none;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.carousel-indicators li {
+    position: relative;
+    min-height: 1px;
+    padding: 0;
+    padding-right: 15px;
+    padding-left: 15px;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    text-indent: 0;
+    cursor: pointer;
+    border: none;
+    border-radius: 0px;
+    margin: 0;
+    margin-bottom: 0 !important;
+}
+
+@media (min-width: 768px) {
+    .carousel-indicators li.col-sm-6 {
+        width: 50%;
+    }
+}
+
+@media (max-width: 767px) {
+    .carousel-indicators {
+        margin-top: 15px;
+    }
+    .carousel-indicators li.col-xs-3 {
+        width: 90px;
+    }
+}
+.carousel-indicators li.active {
+    position: relative;
+    min-height: 1px;
+    display: inline-block;
+    height: auto;
+}
+
+.carousel-indicators .active {
+    background-color: transparent;
+}
+.carousel-inner {
+    border: 1px solid rgba(40,40,40,1.00);
+}
+
+.carousel-indicators .active a {
+    border: 1px solid rgb(207,20,43) !important;
+}
+.vjs-volume-menu-button, .vjs-captions-button, .vjs-big-play-button {
+    display: none !important;
+}
+a.param-btn {
+    display: block;
+    color: white;
+    padding: 10px 0;
+}
+@media (max-width: 767px) {
+    a.param-btn {
+        margin-bottom: 10px;
+    }
+}
+#category-select {
+    margin-bottom: 70px;
+}
+ 
+.dose-table {
+    margin-top: 20px;
+}
+ 
+#page-wrap .dose-table {
+    width:98%;
+}
+@media (max-width: 767px) {
+    #page-wrap .dose-table {
+        width:100%;
+    }
+}
+.dose-table>thead>tr>th {
+    vertical-align: bottom;
+    border-bottom: none;
+    font-weight: 600;
+
+    color: white;
+    font-size:10px;
+}
+.dose-table>tbody>tr>td {
+    color: rgba(188,188,188,1.00);
+    font-size:12px;
+}
+.dose-table>tbody>tr:hover td {
+    color: white;
+}
+.dose-table>tbody>tr>td:first-child {
+    font-weight: 600;
+
+}
+.carousel-indicators .active {
+    position: relative;
+    min-height: 1px; 
+    display: inline-block;
+    width: auto;
+    height: auto;
+    text-indent: 0;
+    cursor: pointer;
+    border: none;
+    border-radius: 0px;
+    margin: 0;
+}
+#clinical-gallery-wrap .btn-outline{
+    border-color:rgba(100,100,100,1.00);
+    color:rgba(160,160,160,1.00);
+}
+#clinical-gallery-wrap .btn-outline:hover{
+    border-color:rgb(207,20,43);
+    color:white;
+    background-color:transparent;
+}	
+#clinical-gallery-wrap .btn-outline.active{
+    background-color:rgb(207,20,43);
+    border-color:rgb(207,20,43);
+    color:white;
+}
+.clinical-section-top{
+    padding-top:120px;
+    padding-bottom:120px;
+}	
+.case-divide{
+    margin-top:130px;
+    border-top:1px solid rgba(41,41,41,1.00);
+    padding-top:130px;
+}	
+	
+.aidr-green {
+    color: rgb(28,155,66)!important;
+}
+.semar-blue {
+    color: rgb(3,140,227) !important;
+}

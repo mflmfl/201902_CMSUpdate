@@ -1,0 +1,96 @@
+// JavaScript Document
+///if($("video.video-js")){$.getScript("//players.brightcove.net/734546198001/S1crzIS_default/index.min.js");} // Load Brightcove JS for player.
+$(document).ready(function () {
+    $(".carousel").carousel({ interval: 99999999 }); // Pause auto-carousel.
+    $(".carousel-caption").hide(); // Hide captions over image/videos.
+    $(".carousel").each(function (index, element) { // Set initial caption for each carousel.
+        var initialCaption = $(element).find(".carousel-caption").first().html();
+        $(element).parents(".row").find(".image-details").html(initialCaption);
+    });
+    $(".carousel").on("slide.bs.carousel", function (event) { // Update captions and pause with each slide.
+        var currentCaption = $(event.relatedTarget).find(".carousel-caption").first().html();
+        $(event.relatedTarget).parents(".row").find(".image-details").html(currentCaption);
+        $("video").trigger("pause");
+    });
+    $(".carousel").on("slid.bs.carousel", function (event) { // Resume playback after slide.
+        $(event.relatedTarget).parents(".row").find(".active video").trigger("play");
+    });
+
+
+    $(".carousel .carousel-inner button.showModal").on('click', function () {
+        var _c = $(this).next().html();
+
+        if ($(this).next().find('video').length) {
+            $('#clenicalModal .modal-body').html('<div class="center-block"><div class="embed-responsive embed-responsive-4by4">' + _c + '</div></div>');
+            setModalWindowSize();
+        } else {
+            $('#clenicalModal .modal-body').html('<div class="center-block"><div class="">' + _c + '</div></div>');
+            $('#clenicalModal .modal-body img').addClass('center-block');
+        }
+
+
+
+        $('#clenicalModal').modal();
+
+    });
+
+    $('#clenicalModal').on('shown.bs.modal', function () {
+        $('.modal-backdrop.in').css('opacity', '1');
+    });
+    $('#clenicalModal').on('hidden.bs.modal', function () {
+        $('.modal-backdrop.in').css('opacity', '0.5');
+    });
+
+
+});
+
+$(window).resize(function () {
+    if ($('#clenicalModal').css('display') == 'block') {
+        if ($('#clenicalModal').find('video').length) {
+            setModalWindowSize();
+        }
+    }
+})
+
+function setModalWindowSize() {
+    var _w = $(window).width();
+    var _h = $(window).height();
+    var _p = 100;
+
+    if (_w > _h) {
+        var _p = _h / _w * 100;
+    }
+    
+    $('#clenicalModal .modal-body > div').css('width', '100%')
+}
+
+
+$(window).scroll(function () {
+    var FadeOnScroll = $(this).scrollTop();
+    if (FadeOnScroll >= 1000) { //when set px is reached 
+        $('#clinical-nav').addClass('fixed'); //class is added to .navbar for desktop and tablet
+    } else {
+        $('#clinical-nav').removeClass('fixed');
+    }
+    if (FadeOnScroll >= 1000) { //when set px is reached 
+        $('#clinical-nav').addClass('remove-fixed'); //class is added to .navbar for mobile
+    } else {
+        $('#clinical-nav').removeClass('remove-fixed');
+    }
+});
+
+//Duplicate tabs to mobile nav dropdown button    
+document.getElementById('mobile-tabs-dropdown').innerHTML = document.getElementById('cat-tabs').innerHTML;
+
+$(window).on('activate.bs.scrollspy', function (e) {
+    var $hash, $node;
+    $hash = $("a[href^='#']", e.target).attr("href").replace(/^#/, '');
+    $node = $('#' + $hash);
+    if ($node.length) {
+        $node.attr('id', '');
+    }
+    document.location.hash = $hash;
+    if ($node.length) {
+        return $node.attr('id', $hash);
+    }
+}); 
