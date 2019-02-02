@@ -1,0 +1,82 @@
+.modal-footer {
+}
+.modal-footer-form {
+	background-color: rgb(30,30,30);
+	border-top: none;
+	color: rgb(255,255,255);
+	text-align: left;
+	padding-bottom: 30px;
+}
+#page-wrap .modal-footer-form h1 {
+	color: rgb(255,255,255);
+	font-size: 36px;
+	margin: 0;
+}
+
+@media (max-width: 480px) {
+#page-wrap .modal-footer-form h1 {
+	font-size: 24px;
+}
+}
+#page-wrap .modal-footer-form p {
+	color: rgb(255,255,255);
+	font-size: 16px;
+}
+#page-wrap .modal-footer-form label {
+	font-size: 16px;
+}
+#page-wrap .modal-footer-form input {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+#page-wrap .modal-footer-form select {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+#page-wrap .modal-footer-form hr {
+	border-top: 1px solid rgb(60,60,60);
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+#page-wrap form.video-inquiry-form {
+	background-color: transparent;
+}
+#page-wrap .form-control-feedback {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 2;
+	display: block;
+	width: 34px;
+	height: 34px;
+	line-height: 34px;
+	text-align: center;
+	pointer-events: none;
+}
+#page-wrap .help-block.with-errors ul li {
+	font-size: 14px;
+	font-family: 'Myriad W01 Regular', sans-serif;
+	border: none;
+	background-color: transparent;
+	color: rgb(255,0,0);
+	padding: 3px 7px;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+#page-wrap .has-error .form-control {
+	background-color: rgb(254,236,236);
+	border-color: red;
+}
+#page-wrap form.video-inquiry-form .btn-submit {
+	width: 100%;
+	background-color: rgb(255,0,0);
+	color: rgb(255,255,255);
+	border-radius: 0;
+	margin-top: 5px;
+}
+.mt-0 {
+	margin-top: 0px!important;
+}
+.mb-0 {
+	margin-bottom: 0px!important;
+}
