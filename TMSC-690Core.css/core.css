@@ -4573,3 +4573,6 @@ table.eventTable th {
 	z-index:4000;
 }
 
+.modal-footer .btn,.modal-footer .btn + .btn{
+	margin-bottom: 10px;
+}
