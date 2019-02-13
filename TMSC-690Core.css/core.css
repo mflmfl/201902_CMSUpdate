@@ -4593,7 +4593,7 @@ table.eventTable th {
 }
 
 
-@media print  and (min-width: 768px) {
+@media print {
 	
 	/**
 	 * Bootstrap Print v1.0.0 (https://github.com/onocom/bootstrap-print)
@@ -4615,6 +4615,7 @@ table.eventTable th {
 	html {
 		overflow: visible !important;
 		zoom: 0.7 !important;
+		
 	}
 
 	body {
