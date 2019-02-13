@@ -1,0 +1,27 @@
+function piResponse() {
+piSetCookie('visitor_id126101', '315816280', 3650);
+piSetCookie('visitor_id126101-hash', '8600227e6404d7d63b00ff89dfc446064d2e167c1169d85af4d9de659ca7a9c17964b938bbe615f4771b48fea48db78692ed7dd5', 3650);
+
+if (document.location.protocol != "https:" || (document.location.protocol == "https:" && true)) {
+var analytics_link = document.location.protocol + "//" + "go.global.medical.canon/analytics?";
+pi.tracker.visitor_id='315816280';
+
+pi.tracker.visitor_id_sign='8600227e6404d7d63b00ff89dfc446064d2e167c1169d85af4d9de659ca7a9c17964b938bbe615f4771b48fea48db78692ed7dd5';
+
+var variables = 'conly=true';
+for (property in pi.tracker) {
+	variables += "&"+property+"="+pi.tracker[property];
+}
+var headID = document.getElementsByTagName("head")[0];
+piScriptObj[piScriptNum] = document.createElement('script');
+piScriptObj[piScriptNum].type = 'text/javascript';
+piScriptObj[piScriptNum].src = analytics_link + variables;
+headID.appendChild(piScriptObj[piScriptNum]);
+piScriptObj[piScriptNum].onload = function() { return; }
+}
+}
+piResponse();
+
+
+
+
