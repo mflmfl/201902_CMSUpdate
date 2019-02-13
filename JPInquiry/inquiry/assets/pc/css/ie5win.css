@@ -1,0 +1,38 @@
+/*
+*/
+/* Header ================================ */
+/* ヘッダー一段目 */
+#headerlv01 {
+	height: 36px;
+}
+#headerlv01 h1 a {
+	height: 30px;
+}
+/* ヘッダー二段目 */
+#headerlv02 h2 a {
+	height: 30px;
+}
+#headersearch .headersearchinput {
+	width: 128px;
+}
+/* ヘッダー三段目 */
+#headerlv03 li {
+	width: 105px;
+}
+#headerlv03 li a {
+	height:  28px;
+}
+/* ヘッダー四段目 */
+/* Footer ================================ */
+#footer {
+	width: 760px;
+}
+/* フッター一段目 */
+/* フッター二段目 */
+#footerlv02 {
+	height: 90px;
+}
+#footerlv02 h3 a {
+	height: 80px;
+}
+/* フッター三段目 */

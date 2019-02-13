@@ -1,0 +1,14 @@
+@import 'base.css';
+
+/* WinIE5.x */
+@media tty {
+	i{content:"\";/*" "*/}} @import 'ie5win.css';
+	{;}/*";}
+}/* */
+
+#headlv03 li {
+	background: transparent url(/tmd/shared/images/liend.gif) no-repeat 100% 0;
+	float: left;
+	padding: 0 17px 0 0;
+	height: 28px;
+}
