@@ -4299,6 +4299,17 @@ a:hover .btn-movie .btn-movie-bg {
     margin-top: 15px;
 }
 
+#publication .side-navigation.side-1{
+	padding-bottom: 20px;
+	border-bottom:1px solid #999;
+
+}
+#publication .side-navigation .list-group{
+	font-size:14px;
+
+}
+
+
 #content-area .btns-tab li.active a.btn {
     color: rgb(204, 0, 0);
     border-color: rgb(204, 0, 0);
@@ -4328,6 +4339,10 @@ a:hover .btn-movie .btn-movie-bg {
 /*add 161121*/
 .embed-responsive-4by4 {
     padding-bottom: 100%;
+}
+
+.embed-responsive-6by6 {
+    padding-bottom: 57%;
 }
 
 #page-wrap .dose-table td, #page-wrap .dose-table th {
