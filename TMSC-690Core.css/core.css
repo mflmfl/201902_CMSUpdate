@@ -5094,7 +5094,7 @@ table.eventTable th {
 	.visible-md-inline,
 	.visible-md-inline-block {
 		display: none !important;
-	},
+	}
 	.visible-lg-block,
 	.visible-lg-inline,
 	.visible-lg-inline-block {
@@ -5109,5 +5109,12 @@ table.eventTable th {
 	.hidden-lg {
 		display: none !important;
 	}
+	
+	.fixed {
+		position: relative!important;
+
+	}
+	
+	
 	
 }
