@@ -1,0 +1,152 @@
+/*
+*/
+/*  ================================ */
+/*  ================================ */
+/* ================================ */
+#contents {
+	width: 760px;
+}
+/* イベント ================================ */
+#event #contents #eventtopics li a {
+	width: 735px;
+	height: 75px;
+}
+
+/* トップ・企業情報トップ ================================ */
+#contents #toptopicpanel a {
+	height: 160px;
+}
+#contents #companytopicpanel a {
+	height: 80px;
+}
+/* contentsmain */
+	/* ↓top↓ */
+#top #contents #topicsmain li a {
+	width: 285px;
+	height: 120px;
+}
+#top #contents #topicsmain li strong {
+	width: 1px;
+	height: 1px;
+}
+	/* ↑top↑ */
+	/* ↓company↓ */
+#company #contents #topicsmain .end { 
+	height: 77px;
+}
+#company #contents #topicsmain li a {
+	width: 570px;
+	height: 75px;
+}
+#company #contents #topicsmain li strong {
+	width: 1px;
+	height: 1px;
+}
+	/* ↑company↑ */
+/* event infomation */
+	/* ↓top↓ */
+	/* ↑top↑ */
+	/* ↓company↓ */
+	/* ↑company↑ */
+/* contentssub */
+#contents #topicssub li a {
+	width: 135px;
+}
+#contents #topicssub li strong {
+	width: 1px;
+	height: 1px;
+}
+#contents #topicssub #topicssubgeneral a { height: 120px; }
+#contents #topicssub #topicssubrecruit a { height: 120px; }
+/*
+#contents #topicssub #topicssubrecruit a { height: 136px; }
+*/
+#contents #topicssub #topicssubbrand a { height: 164px; }
+#contents #topicssub #topicssubpink a { height: 154px; }
+/* 一般のお客様へ general ================================ */
+#general #contents #contentsmain h4 {
+	height: 26px;
+}
+#general #contentssub h4 {
+	height: 26px;
+}
+/* 企業情報 環境・福祉 ================================ */
+#csr #contents .info {
+	width: 450px;
+}
+/* ニュースリリース news ================================ */
+#news .info, #newsold .info {
+	width: 570px;
+}
+
+/* 企業情報 ================================ */
+/* 経営理念 ================================ */
+/*経営理念*/
+#idea #ideasct1 {
+	height: 193px;
+}
+#idea #ideasct2 {
+	height: 253px;
+}
+#idea #ideasct1 ul {
+	height: 82px;
+}
+#tmdsg li {
+	margin: 0 0 14px 0;
+	padding: 10px 8px 5px 8px;
+	width: 283px;
+}
+#tmdsg h5 {
+	height: 35px;
+}
+/*事業経営ビジョン*/
+#idea .vision h5 {
+	height: 100px;
+}
+/*行動基準*/
+#idea #behabiorindex {
+	width: 585px;	height: 316px;
+}
+#idea #behabiorindex li {
+	text-indent: -18px;
+}
+#idea #behabiorindex ul ul li {
+	text-indent: 0;
+}
+/* 国内ネットワーク ================================ */
+#areanavi {
+	height: 28px;
+}
+/* Utility ================================ */
+#utility .section {
+	width: 685px;
+}
+/* サイトマップ sitemap ================================ */
+#sitemap #contents h4 a {
+	height: 14px;
+}
+/* 検索のヘルプ search ================================ */
+#search #contents {
+	width: 600px;
+}
+/* bland2 ================================ */
+#brand2 #contents h3 {
+	height: 40px;
+}
+
+
+.brandpage01 h5, .brandpage02 h5, .brandpage03 h5, .brandpage04 h5, .brandpage05 h5 {
+	height: 52px;
+}
+#brand2 #brand2navitop li a {
+	height: 24px;
+}
+#brand2 #contents #brand2navibottom li a {
+	height: 24px;
+}
+#brand2 #brand2pageshift p a {
+	height: 12px;
+}
+
+
+

@@ -1,0 +1,509 @@
+@charset "utf-8";
+
+/* 東芝メディカルシステムズ様 基本設定CSS */
+
+
+/*
+
+		1. 共通設定
+		2. フォント・リンク設定
+		3. 段落設定
+		4. ページ内設定
+		5. フォーム
+		6. 汎用セレクタ
+
+*/
+
+/* -------------------------------------------
+		1. 共通設定
+	------------------------------------------- */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,body {
+	height: 100%;
+	margin: 0px;
+	font-size: 13px;
+	line-height: 18px;
+	color: #333333;
+	background: #fff;
+	word-wrap: break-word;
+}
+
+.clear {
+	clear: both;
+}
+
+img {
+	vertical-align: baseline;
+	-ms-interpolation-mode: bicubic;
+}
+
+a img {
+	border: 0;
+}
+
+h1.toshiba-logo {
+	 margin:0 0 10px;
+}
+
+h1.tmd-logo {
+	margin:0;
+}
+
+.clearfix:after {
+  content: ".";  /* 新しい要素を作る */
+  display: block;  /* ブロックレベル要素に */
+  clear: both;
+  height: 0;
+  font-size: 0;
+  visibility: hidden;
+}
+
+.clearfix {
+  min-height: 1px;
+}
+
+* html .clearfix {
+  height: 1px;
+  /*¥*//*/
+  height: auto;
+  overflow: hidden;
+  /**/
+}
+
+/* -------------------------------------------
+		2. フォント・リンク設定
+	------------------------------------------- */
+
+/* ------------ フォント ------------ */
+
+body {
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+.fs-l {
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.fs-m {
+	font-size: 13px;
+	line-height: 18px;
+}
+
+.fs-s {
+	font-size: 10px;
+	line-height: 14px;
+}
+
+.fw-b {
+	font-weight: bold;
+}
+
+/* ------------ フォントカラー ------------ */
+
+.fc-org {
+	color: #FF6600;
+}
+
+.fc-pink {
+	color: #ff2c59;
+}
+
+.fc-red {
+	color: #cf2a28;
+}
+
+.fc-blue {
+	color: #0066cc;
+}
+
+.must {
+	color: #f00;
+	font-weight: bold;
+}
+
+/* ------------ リンク ------------ */
+
+a:link,
+a:visited {
+	color: #333;
+}
+
+a:hover,
+a:active {
+	color: #00f;
+}
+
+/* ------------ 選択時 ------------ */
+
+/*
+
+::selection {
+	background: #ffdddd;
+	color: #000;
+}
+
+::-moz-selection {
+	background: #ffdddd;
+	color: #000;
+}
+
+*/
+
+/* -------------------------------------------
+		3. 段落設定
+	------------------------------------------- */
+
+#container {
+	margin: 0;
+	padding: 0;
+}
+
+div#container {
+	width: 100%;
+	min-width: 100%;
+	margin: 0 auto;
+	padding: 0;
+	text-align: left;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	overflow:hidden;
+}
+
+body > #contents {
+	height: auto;
+	padding: 0;
+}
+
+div#contents {
+	width: 100%;
+	margin: 0 auto 18px;
+	height: auto;
+	padding: 2px 10px 10px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#header {
+	width: 100%;
+	min-width: 100%;
+	margin: 0 auto 10px;
+	padding: 10px;
+	border-bottom:2px solid #f00;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#footer {
+	width: 100%;
+	bottom:  0px;
+	margin: 0 auto;
+	padding: 10px;
+	text-align:center;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#footer a {
+	text-decoration:none;
+}
+
+/* -------------------------------------------
+		4. ページ内設定
+	------------------------------------------- */
+
+#contents {
+	font-size:16px;
+	line-height:26px;
+	color:#111;
+}
+
+h2.page-title {
+	font-size:24px;
+	font-weight:bold;
+	margin:0 0 10px;
+}
+
+h3.corner-title {
+	font-size:16px;
+	font-weight:bold;
+	margin:0 0 10px;
+}
+
+h3.form-title {
+	float:left;
+	font-weight:normal;
+}
+
+p.form-memo {
+	font-size:14px;
+	color:#3366cc;
+	text-align:right;
+}
+
+.form-title-area {
+	margin:0 0 6px;
+}
+
+/* Flow */
+
+.flow-status {
+	border-bottom:1px solid #d2d2d2;
+	margin:0 0 20px;
+	text-align:left;
+}
+
+	.flow-status ul {
+		margin:0;
+		padding:0;
+		list-style-type:none;
+	}
+	
+	.flow-status li {
+		padding:4px 2px;
+		display:inline-block;
+		font-size:13px;
+		line-height:13px;
+		margin:0 0 4px;
+	}
+		
+		.flow-status li.focus {
+			background-color:#000;
+			border-radius: 3px;
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			color:#FFF;
+			font-weight:bold;
+		}
+/* Flow end */
+
+
+.tos-box {
+	border:1px solid #d2d2d2;
+	padding:10px;
+	margin:0 0 10px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+	.tos-box ul {
+		margin:8px 0 20px 20px;
+		padding:0;
+	}
+	
+	.tos-box li {
+		margin:0 0 8px;
+	}
+	
+.tos-agree-box {
+	text-align:center;
+}
+	
+	.tos-agree-box .error-box {
+		height:45px;
+	}
+		
+		.tos-agree-box .error-box .error-txt {
+			font-size:13px;
+			line-height:18px;
+			color:#f00;
+			font-weight:bold;
+            margin: 0;
+		}
+
+.form-block {
+	margin:0 0 20px;
+}
+
+.confirm-box {
+	padding:0 0 10px;
+	margin:0 0 10px;
+	border-bottom:1px solid #dcdcdc;
+}
+
+a.go-top-link {
+	padding:16px;
+	display:block;
+	cursor:pointer;
+	border:4px solid #bfbfbf;
+	background-color:#FFF;
+	width:100%;
+	font-weight:bold;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	text-align:center;
+	color:#111;
+	text-decoration:none;
+}
+
+.error-txt {
+	color:#F00;
+    margin-bottom: 10px;
+}
+
+.confirm-txt {
+	font-size:13px;
+	line-height:18px;
+	font-weight:bold;
+}
+
+.error-read {
+	font-size:12px;
+	line-height:18px;
+	color:#F00;
+	margin-bottom: 20px;
+	font-weight:bold;
+}
+
+/* -------------------------------------------
+		5. フォーム
+	------------------------------------------- */
+
+.btn-area {
+	text-align:center;
+	padding:0;
+}
+
+.btn-area input[type="submit"] {
+	padding:16px;
+	display:block;
+	cursor:pointer;
+	border:4px solid #bfbfbf;
+	background-color:#FFF;
+	width:100%;
+	font-weight:bold;
+	appearance: none;
+	-webkit-appearance: none;
+	border-radius: 0;
+}
+
+textarea,
+input[type="text"],
+input[type="password"],
+select {
+	margin:0 0 10px;
+}
+
+select,
+option,
+input[type="submit"],
+input[type="button"] {
+	font-size: 16px;
+}
+
+textarea,
+input[type="text"],
+input[type="password"] {
+	background-color: #FFFFFF;
+	border: 1px solid #CFCFCF;
+	padding:12px 6px;
+	outline:none;
+	font-size: 15px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus {
+	border: 1px solid #00AFF0;
+}
+
+textarea.error-area,
+input[type="text"].error-area,
+select.error-area{
+	border:1px solid #F00;
+}
+
+.zip-search {
+	width:80px;
+	padding:4px 0;
+	text-align:center;
+	display:inline-block;
+	border:1px solid #a6a6a6;
+	background-color:#f8f8f8;
+	font-size:14px;
+	text-decoration:none;
+	color:#111;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	margin:0 0 0 10px;
+	vertical-align:middle;
+}
+
+/* サイズ */
+
+input[type="text"].text-long {width:100%;}
+input[type="text"].size-zip01 {width:75px;}
+input[type="text"].size-zip02 {width:100px;}
+input[type="text"].telno-01 {width:96px;}
+
+textarea {
+	width:100%;
+	height:300px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* -------------------------------------------
+		6. 汎用セレクタ
+	------------------------------------------- */
+
+/* ------------ マージン ------------ */
+
+.mt-10 { margin-top: 10px !important; }
+.mt-20 { margin-top: 20px !important; }
+.mt-30 { margin-top: 30px !important; }
+.mt-40 { margin-top: 40px !important; }
+
+.mb-10 { margin-bottom: 10px !important; }
+.mb-20 { margin-bottom: 20px !important; }
+.mb-30 { margin-bottom: 30px !important; }
+.mb-40 { margin-bottom: 40px !important; }
+
+.ml-10 { margin-left: 10px !important; }
+.ml-20 { margin-left: 20px !important; }
+.ml-30 { margin-left: 30px !important; }
+.ml-40 { margin-left: 40px !important; }
+
+.mr-10 { margin-right: 10px !important; }
+.mr-20 { margin-right: 20px !important; }
+.mr-30 { margin-right: 30px !important; }
+.mr-40 { margin-right: 40px !important; }
+
+/* ------------ パディング ------------ */
+
+.pt-10 { padding-top: 10px !important; }
+.pt-20 { padding-top: 20px !important; }
+.pt-30 { padding-top: 30px !important; }
+.pt-40 { padding-top: 40px !important; }
+
+.pb-10 { padding-bottom: 10px !important; }
+.pb-20 { padding-bottom: 20px !important; }
+.pb-30 { padding-bottom: 30px !important; }
+.pb-40 { padding-bottom: 40px !important; }
+
+.pl-10 { padding-left: 10px !important; }
+.pl-20 { padding-left: 20px !important; }
+.pl-30 { padding-left: 30px !important; }
+.pl-40 { padding-left: 40px !important; }
+
+.pr-10 { padding-right: 10px !important; }
+.pr-20 { padding-right: 20px !important; }
+.pr-30 { padding-right: 30px !important; }
+.pr-40 { padding-right: 40px !important; }
+

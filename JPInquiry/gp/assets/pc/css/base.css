@@ -1,0 +1,123 @@
+@charset "utf-8";
+* {font-style: normal;font-weight: normal;list-style-type: none;margin: 0;padding: 0;}
+h1, h2, h3, li, dt, dd, p {margin: 0;padding: 0;font : 13px/1.5 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif;}
+
+h1, h2, h3, h4, h5, h6, li, dt, dd, th, td, caption,
+p, #contents p {;font : 13px/1.5 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif;}
+
+#hNav img {vertical-align: bottom;}
+#hNav .l a,
+#fNav .l a {text-decoration: none;}
+#hNav .l a:link,
+#hNav .l a:visited,
+#fNav .l a:link,
+#fNav .l a:visited {padding: 0 1px;border-bottom: 1px solid #CCC;color: #4E4D81;}
+#hNav .l a:hover,
+#fNav .l a:hover {padding: 0 1px;border-bottom: 1px solid #00F;color: #00F;}
+.wrap {max-width: 960px;min-width: 785px;margin: 0 auto;}
+.contwrap {width: 785px;margin: 0 auto;}
+
+/* header */
+#hNav {padding-bottom: 20px;}
+#hNav p {padding: 0;}
+#hNav, #hNav p, #hNav li {font-size: 11px;line-height: 14px;}
+
+#toshiba a, #tmsc a {display: block;overflow: hidden;text-indent: -9999px;}
+/* #tNav */
+
+#tNav {height: 64px;}
+#hNav p#toshiba {float: left;padding: 14px 9px 12px 25px;}
+#toshiba a {width: 140px;height: 38px;background: url(../images/logo_toshiba.gif) no-repeat 0 0;}
+
+#tNav ul {position: relative;float: right;padding: 36px 25px 0 0;}
+#tNav li.l {float: left;padding: 0 0 0 18px;background: url(../images/mrkarrowright.gif) no-repeat 10px 45%;}
+#hInfo {position: absolute;top: 15px;right: 25px;width:75px;height:14px;x}
+#hInfo a {display: block;width:75px;height:14px;overflow: hidden;text-indent:-9999px;background: url(../images/info.gif) no-repeat 0px 0px;}
+#hInfo a:hover {background-position: 0 -20px;}
+
+/* #mNav */
+#mNav {clear: both;height: 37px;border-top: 1px solid #E6E6E6;}
+#hNav p#tmsc {float: left;padding: 0 0 0 25px;}
+#tmsc a {width: 270px;height: 30px;background: url(../images/logo_medical.gif) no-repeat 0 8px;}
+
+/* 検索窓（トップのみ） */
+#headsearch {float: right;padding: 4px 25px 0 30px;background: url(../images/search.gif) no-repeat 0 9px;}
+#headsearch p, #headsearch input {vertical-align: middle;}
+#headsearch .inputarea {width: 124px;height: 20px;margin: 0;padding: 0;}
+#headsearch .button {margin: 0 0 0 4px;}
+#mNav .sitetop {float: right;margin: 8px 0 0;padding: 0 25px 0 8px;background: url(../images/mrkarrowleft.gif) no-repeat 0 3px;}
+
+/* #gNav */
+#nHome {display: none;}
+#gNav {border-bottom: 2px solid #F33;}
+/*.futility #gNav {border-bottom: 2px solid #CCC;}*/
+
+#gNav ul {clear: both;width: 557px;height: 28px;margin: 0 auto;background: url(../images/liend.gif) no-repeat;}
+#gNav li {float: left;height: 28px;padding: 0 17px 0 0;background: url(../images/liend.gif) no-repeat 100% 0;}
+#gNav li#nProducts {padding-left: 8px;}
+#gNav li a {display: block;height: 28px;overflow: hidden;font-size: 1px;line-height: 1;text-indent: -9999px;}
+#nProducts a {width: 89px;background: url(../images/navi_products.gif) no-repeat 0 0;}
+#nService a {width: 88px;background: url(../images/navi_service.gif) no-repeat 0 0;}
+#nLibrary a {width: 112px;background: url(../images/navi_library.gif) no-repeat 0 0;}
+#nEvent a {width: 86px;background: url(../images/navi_event.gif) no-repeat 0 0;}
+#nCompany a {width: 89px;background: url(../images/navi_company.gif) no-repeat 0 0;}
+#gNav li a:hover {background-position: 0 -30px;}
+.products #nProducts a, .service #nService a, .library #nLibrary a, .event #nEvent a, .company #nCompany a {background-position: 0 -60px;}
+
+/* #cNav */
+#cNav {clear: both;border-bottom: 1px solid #DBDBDB;background: #F3F3F3;}
+#cNav p {padding: 2px 0 3px 25px;color: #CCC;line-height: 20px;}
+#cNav strong {color: #333;}
+
+/* footer */
+#fNav, #fNav p, #fNav li {font-size: 11px;line-height: 14px;}
+#fNav {clear: both;padding: 25px 0 30px 0;}
+#fNav p {padding: 0;}
+
+#fNav02 p.logo a, #fNav03 address a {display: block;overflow: hidden;text-indent: -9999px;}
+#fNav01 ul {padding: 0 25px;}
+#fNav01 .wrap {height: 22px;}
+#fsTop {float: left;padding: 0 0 0 8px;background: url(../images/mrkarrowleft.gif) no-repeat 0 45%;}
+#fpTop {float: right;padding: 0 8px 0 0;background: url(../images/mrkarrowupper.gif) no-repeat 100% 45%;}
+
+#fNav02 {clear: both;border-top: 1px solid #E6E6E6;padding: 10px 0 0 0;}
+#fNav02 p.logo {float: left;padding-left: 25px;;}
+#fNav02 p.logo a {width: 310px;height: 79px;background: url(../images/footerlogo.gif) no-repeat 0 0;}
+#fNav02 p.read {float: right;width: 315px;padding-right: 25px;}
+#fNav02 p.read {font-size: 13px;line-height: 18px;}
+#fNav03 {clear: both;padding: 5px 0;border-top: 1px solid #E6E6E6;}
+#fNav03 ul {float: left;padding: 2px 25px 0 25px;}
+#fNav03 li {float: left;padding: 0 10px 0 8px;background: url(../images/mrkarrowright.gif) no-repeat 0 45%;}
+#fNav03 address {padding: 2px 25px 0 0;}
+#fNav03 address a {width: 430px;height: 12px;margin: 0 0 0 auto;background: url(../images/foot_copy.gif) no-repeat 0 0;}
+
+
+p#tbanner {display: none;}
+
+/* -------- */
+#contents h3 img {vertical-align: bottom;}
+
+/* パンくず */
+#cNav {
+	background-color:#f3f3f3;
+	border-bottom:1px solid #dbdbdb;
+	color:#CCC;
+}
+	
+	#cNav .wrap {
+		width:980px;
+		margin:0 auto;
+	}
+	
+	#cNav a {
+		color:#6b6a96;
+		border-bottom:1px solid #cccccc;
+	}
+	
+	#cNav a:hover {
+		color:#0022fb;
+	}	
+	
+	#cNav strong {
+		color:#333;
+	}

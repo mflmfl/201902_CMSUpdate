@@ -1,0 +1,51 @@
+.modal-footer {
+	
+}
+.modal-footer-form {
+    text-align: left; color: rgb(255, 255, 255); padding-bottom: 30px; border-top-color: currentColor; border-top-width: medium; border-top-style: none; background-color: rgb(30, 30, 30);
+}
+#page-wrap .modal-footer-form h1 {
+    margin: 0px; color: rgb(255, 255, 255); font-size: 36px;
+}
+@media all and (max-width:480px)
+{
+    #page-wrap .modal-footer-form h1 {
+        font-size: 24px;
+    }
+}
+#page-wrap .modal-footer-form p {
+    color: rgb(255, 255, 255); font-size: 16px;
+}
+#page-wrap .modal-footer-form label {
+    font-size: 16px;
+}
+#page-wrap .modal-footer-form input {
+    padding-right: 10px; padding-left: 10px;
+}
+#page-wrap .modal-footer-form select {
+    padding-right: 5px; padding-left: 5px;
+}
+#page-wrap .modal-footer-form hr {
+    margin-top: 15px; margin-bottom: 15px; border-top-color: rgb(60, 60, 60); border-top-width: 1px; border-top-style: solid;
+}
+#page-wrap form.video-inquiry-form {
+    background-color: transparent;
+}
+#page-wrap .form-control-feedback {
+    top: 0px; width: 34px; height: 34px; text-align: center; right: 0px; line-height: 34px; display: block; position: absolute; z-index: 2; pointer-events: none;
+}
+#page-wrap .help-block.with-errors ul li {
+    padding: 3px 7px; border: currentColor; border-image: none; color: rgb(255, 0, 0); font-family: "Myriad W01 Regular", sans-serif; font-size: 14px; margin-top: 0px; margin-bottom: 0px; background-color: transparent;
+}
+#page-wrap .has-error .form-control {
+    border-color: red; background-color: rgb(254, 236, 236);
+}
+#page-wrap form.video-inquiry-form .btn-submit {
+    border-radius: 0px; width: 100%; color: rgb(255, 255, 255); margin-top: 5px; background-color: rgb(255, 0, 0);
+}
+.mt-0 {
+    margin-top: 0px !important;
+}
+.mb-0 {
+    margin-bottom: 0px !important;
+}
