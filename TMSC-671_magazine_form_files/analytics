@@ -1,0 +1,27 @@
+function piResponse() {
+piSetCookie('visitor_id126101', '315834716', 3650);
+piSetCookie('visitor_id126101-hash', '660a7353bb640d909d08cf37def10871750f31aa1c528a243cd048d46e8ceeb72d6fb5ae0d1ab50333c5ab19b16dcb22e7ea57c6', 3650);
+
+if (document.location.protocol != "https:" || (document.location.protocol == "https:" && true)) {
+var analytics_link = document.location.protocol + "//" + "go.global.medical.canon/analytics?";
+pi.tracker.visitor_id='315834716';
+
+pi.tracker.visitor_id_sign='660a7353bb640d909d08cf37def10871750f31aa1c528a243cd048d46e8ceeb72d6fb5ae0d1ab50333c5ab19b16dcb22e7ea57c6';
+
+var variables = 'conly=true';
+for (property in pi.tracker) {
+	variables += "&"+property+"="+pi.tracker[property];
+}
+var headID = document.getElementsByTagName("head")[0];
+piScriptObj[piScriptNum] = document.createElement('script');
+piScriptObj[piScriptNum].type = 'text/javascript';
+piScriptObj[piScriptNum].src = analytics_link + variables;
+headID.appendChild(piScriptObj[piScriptNum]);
+piScriptObj[piScriptNum].onload = function() { return; }
+}
+}
+piResponse();
+
+
+
+
