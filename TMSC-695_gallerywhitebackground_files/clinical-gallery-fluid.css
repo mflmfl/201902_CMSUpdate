@@ -4,6 +4,8 @@
 #clinical-gallery-wrap {
     background-color: rgba(0,0,0,1.00);
 }
+
+
 #clinical-gallery-wrap h2 {
     margin-top: 0;
     margin-bottom: 5px;
@@ -528,4 +530,19 @@ a.param-btn {
 }
 .semar-blue {
     color: rgb(3,140,227) !important;
+}
+
+#clinical-gallery-wrap.clinical-gallery-Wh{
+    background-color: rgba(255,255,255,1.00);
+}
+
+#clinical-gallery-wrap.clinical-gallery-Wh h3 {
+    color: rgba(50,50,50,1.00);
+}
+#clinical-gallery-wrap.clinical-gallery-Wh p {
+    color: rgba(50,50,50,1.00);
+}
+
+#clinical-gallery-wrap.clinical-gallery-Wh .image-details {
+    border-top: none;
 }
