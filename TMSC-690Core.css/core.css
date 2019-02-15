@@ -5198,6 +5198,14 @@ table.eventTable th {
 	padding:6px 12px;
 }
 
+
+#brand-area .headerSPComName{
+	padding:8px;
+	background:#efefef;
+	text-align: center;
+}
+
+
 @media (min-width: 992px) {
 	#brand-area #dropdownCanonMenu {
 		padding:11px 12px;
