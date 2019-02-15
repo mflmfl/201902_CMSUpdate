@@ -546,3 +546,16 @@ a.param-btn {
 #clinical-gallery-wrap.clinical-gallery-Wh .image-details {
     border-top: none;
 }
+
+#clinical-gallery-wrap .clinical-section{
+    padding: 80px 0;
+    margin-bottom:-30px;
+}
+
+#clinical-gallery-wrap.clinical-gallery-Wh #clinical-nav{
+	background-color: rgb(216, 216, 216);
+
+}
+#clinical-gallery-wrap.clinical-gallery-Wh #cat-tabs li a {
+	color:rgb(50, 50, 50);
+}
