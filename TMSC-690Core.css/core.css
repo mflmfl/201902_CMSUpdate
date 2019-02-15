@@ -1404,6 +1404,12 @@ a.btn.btn-icon.publication {
     padding-left: 45px;
 }
 
+#content-area .btn-icon.btn-lg{
+    font-size: 16px;
+
+}
+
+
     #content-area .btn-icon strong {
         background-color: rgba(249, 249, 249, 1.00);
         padding: 10px 12px;
@@ -1412,7 +1418,7 @@ a.btn.btn-icon.publication {
         left: -1px;
         top: -1px;
         transition: all ease-in-out .15s;
-        height: 104%;
+        height: 106%;
     }
 
     #content-area .btn-icon:hover {
@@ -2827,6 +2833,12 @@ a.btn.btn-icon.publication {
     margin: 0px 15px 7px 0px
 }
 
+
+.press-release-content p,
+.press-release-content ul{
+	margin-bottom: 30px!important;
+}
+
 #press-share .btn {
     padding: 10px 15px;
 }
@@ -2929,9 +2941,16 @@ a.btn.btn-icon.publication {
     margin-bottom: 10px;
     width: 381px;
 }
+.wp-caption2 {
+    padding: 10px;
+    border: 1px solid rgb(200, 200, 200);
+    margin-left: 10px;
+    margin-bottom: 10px;
+    width: 33%;
+}
 
 @media (max-width: 767px) {
-    .wp-caption {
+    .wp-caption,.wp-caption2 {
         width: 100%;
     }
 }
@@ -4044,7 +4063,7 @@ a.btn.btn-icon.publication {
 */
 /*text*/
 .futo {
-    font-weight: bold;
+    font-weight: bold!important;
 }
 /*hover*/
 .hov {
