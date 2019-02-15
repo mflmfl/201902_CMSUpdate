@@ -1830,6 +1830,23 @@ a.btn.btn-icon.publication {
 #tweet-feed .interact {
     display: none;
 }
+
+/*--------rss Feeds----------*/
+
+#rss-feed a:link,
+#rss-feed a:visited {
+	display: block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-decoration: none;
+}
+#rss-feed a:hover,
+#rss-feed a:active {
+	text-decoration: underline;
+}
+
+
 /*--------News Room Feeds----------*/
 #news-room-feed {
     border-bottom: 1px solid rgb(235, 235, 235);

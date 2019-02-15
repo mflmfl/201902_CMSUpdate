@@ -1,0 +1,277 @@
+
+$(function(){
+    //call Navigation Activate func.
+	setNavAct();
+
+	//init Video modal
+	initVidModal();
+
+	//Close Region selector
+	$("#RSClose").on('click',function(){
+		$("#regionSelector").collapse('hide')
+	})
+
+
+	// ACTIVATE toggle to open mobile menu
+	$("#menu-toggle").click(function(e){
+		e.stopPropagation();
+		$("#navbar-mobile").toggleClass('open-menu'); //open main menu
+	});
+	$("#menu-toggle-close").click(function(e){
+		e.stopPropagation();
+		$("#navbar-mobile").removeClass('open-menu'); //open main menu
+	});
+	
+	$("#menu-toggle").click(function(e){
+		e.stopPropagation();
+		$("#mobile-background").toggleClass('open-mobile-background'); //open main menu
+	});
+	$("#menu-toggle-close").click(function(e){
+		e.stopPropagation();
+		$("#mobile-background").removeClass('open-mobile-background'); //open main menu
+	});
+	 // ACTIVATE collapse class on mobile menu
+	$('#navbar-mobile .collapse').collapse(); 
+
+
+
+	$(window).scroll(function(){
+		var FadeOnScroll = $(this).scrollTop();
+		if(FadeOnScroll >= 600) { //when set px is reached 
+			$('#secondary-nav').addClass('fixed');  //class is added to .navbar for desktop and tablet
+			$('#secondary-nav .navbar-right').addClass('display'); //display contact info
+			$('#modality-contact').addClass('display'); //display contact info on modaility page
+			
+			$('.modality-navbar-trigger').removeClass('modality-navbar-hidden'); //
+		}else{
+			$('#secondary-nav').removeClass('fixed');
+			$('#secondary-nav .navbar-right').removeClass('display'); //remove contact info
+			$('#modality-contact').removeClass('display'); //remove contact info on modality page
+			
+			$('.modality-navbar-trigger').addClass('modality-navbar-hidden'); //
+		}
+		if(FadeOnScroll >= 600) { //when set px is reached 
+			$('#secondary-nav').addClass('remove-fixed');  //class is added to .navbar for mobile
+		}else{
+			$('#secondary-nav').removeClass('remove-fixed');
+		}
+	});
+	
+	//ACTIVATE smooth scroll with .scroll-item class
+	 $('a.scroll-item').click(function(){
+		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+		var target = $(this.hash);
+			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+		if (target.length) {
+			$('html,body').animate({
+			  scrollTop: target.offset().top
+			}, 1000);
+			return false;
+		  }
+		}
+	});
+
+	//ACTIVATE table row links
+	$(".table-row-link").click(function() {
+		window.document.location = $(this).data("href");
+	});
+	
+	
+		
+	//Match div height on Experience page for well-link items with .equal-height applied to <p> tag	
+	//Use jquery.heightLine.js(for Responsive use.)
+	$(window).load(function(){
+		$('.row .col-sm-4 .thumbnail-testimonails .caption').heightLine({
+			minWidth:760
+		});
+		$('.row .col-sm-4 .well-link p.equal-height').heightLine({
+			minWidth:760
+		});
+		
+		$('.eqh1').heightLine({
+			minWidth:760
+		});
+		$('.eqh2').heightLine({
+			minWidth:760
+		});
+		$('.eqh3').heightLine({
+			minWidth:760
+		});
+		$('.eqh4').heightLine({
+			minWidth:760
+		});
+		$('.eqh5').heightLine({
+			minWidth:760
+		});
+		$('.eqh6').heightLine({
+			minWidth:760
+		});		
+	});
+	
+		
+	// Activate share links in secondary nav.
+	$("#share-dropdown .zmdi-facebook-box, #share-dropdown-footer .zmdi-facebook-box, #share-dropdown-resource-nav .zmdi-facebook-box").closest("a").click(function(event){
+		var docTitle = encodeURI(document.title),
+			docLocation = encodeURI(document.location.href),
+			docMessage = docTitle + ': ' + docLocation;
+		$(this).attr("target","_blank").attr("href",'http://www.facebook.com/sharer.php?u='+docLocation+'&t='+docTitle);
+	});
+	$("#share-dropdown .zmdi-twitter-box, #share-dropdown-footer .zmdi-twitter-box, #share-dropdown-resource-nav .zmdi-twitter-box").closest("a").click(function(){
+		var docTitle = encodeURI(document.title),
+			docLocation = encodeURI(document.location.href),
+			docMessage = docTitle + ': ' + docLocation;
+		$(this).attr("target","_blank").attr("href",'http://twitter.com/intent/tweet?status='+docMessage+'&url='+docLocation);
+	});
+	$("#share-dropdown .zmdi-linkedin-box, #share-dropdown-footer .zmdi-linkedin-box, #share-dropdown-resource-nav .zmdi-linkedin-box").closest("a").click(function(){
+		var docTitle = encodeURI(document.title),
+			docLocation = encodeURI(document.location.href),
+			docMessage = docTitle + ': ' + docLocation;
+		$(this).attr("target","_blank").attr("href",'http://www.linkedin.com/shareArticle?mini=true&url='+docLocation+'&title='+docTitle+'&ro=false&summary=&source=');
+	});
+	$("#share-dropdown .zmdi-email, #share-dropdown-footer .zmdi-email, #share-dropdown-resource-nav .zmdi-email").closest("a").click(function(){
+		var docTitle = encodeURI(document.title),
+			docLocation = encodeURI(document.location.href),
+			docMessage = docTitle + ': ' + docLocation;
+		$(this).attr("href",'mailto:%20?subject='+docTitle+'&body='+docLocation);
+	});
+	
+	// Push hash value to URL when modal is opened.
+	$("a[data-toggle='modal']").click(function(e) {
+		console.log($(this).attr("href"));
+		window.location.hash = $(this).attr("href");
+	});
+	
+	// Remove hash on modal close.
+	$('body').on('hidden.bs.modal','.modal',function(){
+		history.pushState('', document.title, window.location.pathname);
+	});
+	
+	$('body').on('loaded.bs.modal','.modal',function(e){
+		console.log("Event: Modal loaded.");
+		$("video").bind("pause",function(e){
+			console.log("Event: Video paused, " + $(this).attr("src"));
+			$(".modal-footer-form").removeClass("visible-md").removeClass("visible-sm").removeClass("visible-xs");
+		});
+		$("video").bind("ended",function(e){
+			console.log("Event: Video ended, " + $(this).attr("src"));
+			$(".modal-footer-form").removeClass("visible-md").removeClass("visible-sm").removeClass("visible-xs");
+			//$(".btn-modal-contact").css("display","block");
+		});	
+	});
+
+});
+
+
+function setNavAct(){
+	
+	/*primary-nav Activation*/
+	var path = $(location).attr('pathname');
+	path.indexOf(1);
+	path.toLowerCase();
+	var dir = path.split("/")[1];
+
+	switch(dir){
+		case 'products':
+		    $('#primary-nav ul > li#products').addClass('act');
+			break;
+		case 'service':
+		    $('#primary-nav ul > li#support').addClass('act');
+			break;
+		case 'education':
+		    $('#primary-nav ul > li#education').addClass('act');
+			break;
+		case 'news':
+		    $('#primary-nav ul > li#news-events').addClass('act');
+			break;
+		case 'about':
+		    $('#primary-nav ul > li#about-us').addClass('act');
+			break;
+		case 'contact':
+		    $('#primary-nav ul > li#contact').addClass('act');
+			break;
+		default:
+			break;
+	}
+	
+	
+	/*secondary-nav Activation*/
+	var href = location.href.split('#');
+	var href2 = href[0]+"index.html";
+	
+	$('#secondary-nav ul > li > a').each(function(){
+		if (href[0] == this.href ||  href2 == this.href ){
+			$(this).parent().addClass('act');
+		}
+	});
+
+
+	$('.coll_acc').on('show.bs.collapse','.collapse', function(){
+        $('.collapse').removeClass('in');
+    });
+
+}
+
+
+function initVidModal(){
+	var ytLink = $('a[href="#ytModal"]').length;
+	var vdLink = $('a[href="#vdModal"]').length;
+	
+	
+	if(vdLink){
+		initVdModal();
+	}
+	
+	if(ytLink){
+		initYtModal();
+	}
+	
+}
+
+
+function initYtModal(){
+	
+	$("body").append('<div id="ytModal" class="modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button><h4 class="modal-title">YouTube Video</h4></div><div class="modal-body"><div class="embed-responsive embed-responsive-16by9"><iframe id="video" src="" frameborder="0" allowfullscreen class="embed-responsive-item"></iframe></div></div></div></div></div>');
+	
+	
+	$('#ytModal').on('show.bs.modal', function (event) {
+		var url =  $(event.relatedTarget).data('source');
+		var title =  $(event.relatedTarget).data('title');
+		$(this).find('#video').prop('src',url);
+		if(title){
+			$(this).find('.modal-title').text(title);
+		}else{
+			$(this).find('.modal-title').text('ビデオ');
+		}
+	});
+
+	
+	$('#ytModal').on('hide.bs.modal', function (event) {
+		$(this).find('#video').prop('src','');
+	});
+	
+}
+
+function initVdModal(){
+	
+	$("body").append('<div class="modal fade" id="vdModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="myModalLabel">Video</h4></div><div class="modal-body"><div class="embed-responsive embed-responsive-16by9"><video class="embed-responsive-item" controls preload="none" poster=""><source src="../resources/media/Video-Example.mp4" /></video></div></div></div></div></div>');
+	
+	
+	$('#vdModal').on('show.bs.modal', function (event) {
+		var url =  $(event.relatedTarget).data('source');
+		var title =  $(event.relatedTarget).data('title');
+		$(this).find('source').prop('src',url);
+		if(title){
+			$(this).find('.modal-title').text(title);
+		}else{
+			$(this).find('.modal-title').text('ビデオ');
+		}
+	});
+
+	
+	$('#vdModal').on('hide.bs.modal', function (event) {
+		$(this).find('source').prop('src','');
+	});
+
+
+	
+}
