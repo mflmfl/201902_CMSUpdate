@@ -870,29 +870,69 @@
 </script>
 <script type="text/javascript">
     $(document).ready(function () {
-        $.ajax({
-            type: "GET",
-            url: "https://www.googleapis.com/youtube/v3/search?key=AIzaSyAdavg7wFTwok8dU1ReL16ra2FsVbxgkmw",
-            data: {
-                channelId: "UCIhADTRbjgRGZyMMXHPp_uw",
-                order: "date",
-                maxResults:"4",
-                part: "snippet,id",
-                type:"video"
-            },
-            dataType: 'json',
-            success: function (response) {
-                var html = Mustache.render(
-                    $('script#youtube-template').html(), {
-                        data: response
-                    }
-                );
-                $('div#youtube-feed-placeholder').html(html);
-            },
-            error: function (error) {
+					//YOUTUBEのV3 API KEYが必要
+        			jQuery.getJSON( 'https://www.googleapis.com/youtube/v3/search?key=AIzaSyDuCJpqLn6OKNFL0L09NBEzlQqlBNfVGKE&channelId=UCIhADTRbjgRGZyMMXHPp_uw&part=snippet,id&order=date&maxResults=4' )
+						.done( function ( data ) {
 
-            }
-        });
+							var html = Mustache.render(
+								$( 'script#youtube-template' ).html(), {
+									data: data
+								}
+							);
+							$( 'div#youtube-feed-placeholder' ).html( html );
+						} );
+					//RSS Feed
+					//urlに実際のRSS フィードのパスが必要
+					//url: '/News/Feed',
+					//になるはずです
+					$.ajax({
+						dataType: 'xml',
+						url: './TMSC-205_Socialmedia_files/test.rss',
+						success: function(data) {
+							// RSSにitem要素がひとつもなかった場合
+							if( $('item', data).length<1 ) {
+								$('#rss-feed').append('<p>記事がありません。</p>');
+								return false;
+							}
+							var itemArr = [];
+							$('item', data).each(function(i) {
+								var item = $(this);
+								itemArr[i] = {}
+								itemArr[i].title = $('title', item).text();
+								itemArr[i].link = $('link', item).text();
+								itemArr[i].guid = $('guid', item).text().replace( '-', '' );
+							
+						
+							})
+							
+							itemArr.sort(function(a,b){
+								if(a.guid>b.guid) return -1;
+								if(a.guid < b.guid) return 1;
+								return 0;
+							});
+							for (var i = 0; i < 4; i++) {
+								var link = itemArr[i].link;
+								var title = itemArr[i].title;
+								$('#rss-feed').append('<p><a class="inline-link" href="'+link+'"><i class="zmdi zmdi-rss"></i>&nbsp;'+title+'</a></p>');
+							}
+							
+						}
+					});
+					
+					//US方式は、pressのJsonFeedがある場合のみ使える。
+					/*
+					$.getJSON( '/news/press-releases/feeds/newsroom/' )
+						.done( function ( rss ) {
+							console.log( rss );
+							var html = Mustache.render(
+								$( 'script#rss-template' ).html(), {
+									rss: rss
+								}
+							);
+							$( 'div#rss-feed' ).html( html );
+							activateTableLinks();
+						} ); //End getJSON
+						*/
     });
 </script>
             </div>
@@ -918,6 +958,9 @@
                     </h2>
                     <hr>
                     <div id="tweet-feed"></div>
+					<h2 class="section-20-top"><i class="zmdi zmdi-rss"></i> News Feed <span class="highlight-grey">| <a href="https://jp.medical.canon/News/PressRelease">Stay Updated</a></span></h2>
+                    <hr>
+                    <div id="rss-feed"></div>
             </div>
         </div>
             <div class="container">
@@ -948,18 +991,20 @@
 
 <script type="text/javascript">
     $(document).ready(function () {
-	    var config1 = {
-		    "id": '983952887272194048',
-		    "domId": 'tweet-feed',
-		    "maxTweets": 3,
-		    "enableLinks": true,
-		    "showUser": true,
-		    "showTime": false,
-		    "lang": 'en'
-	    };
-	    twitterFetcher.fetch( config1 );
+        
+		var configProfile = {
+			"profile": {"screenName": 'CanonMedical'},
+			"domId": 'tweet-feed',
+			"maxTweets": 3,
+			"enableLinks": true, 
+			"showUser": true,
+			"showTime": false,
+			"showImages": false,
+			"lang": 'en'
+		};
+		twitterFetcher.fetch(configProfile);
     });
-</script></div>
+</script>
 
 
     </div>
@@ -1308,8 +1353,8 @@ Due to medical device regulatory reasons, not all products/service displayed on 
 <script type="text/javascript" src="./TMSC-662_snstwitter_files/cookie.notice.js.download"></script>
 <script type="text/javascript" src="./TMSC-662_snstwitter_files/checkbox-radial-toggle-price-quote.js.download"></script>
 <script type="text/javascript" src="./TMSC-662_snstwitter_files/video-inquiry-form.js.download"></script>
-    <script type="text/javascript" src="./TMSC-662_snstwitter_files/mustache.js.download"></script>
-    <script type="text/javascript" src="./TMSC-662_snstwitter_files/twitterFetcher.js.download"></script>
+    <script type="text/javascript" src="TMSC-662_snstwitter_files/mustache.js"></script>
+    <script type="text/javascript" src="TMSC-662_snstwitter_files/twitterFetcher.js"></script>
     <script src="./TMSC-662_snstwitter_files/jQuery.fn.highlight.js.download"></script>
     <script src="./TMSC-662_snstwitter_files/regionCheck.js.download"></script>
 
