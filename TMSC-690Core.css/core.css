@@ -4346,8 +4346,28 @@ a:hover .btn-movie .btn-movie-bg {
 }
 #publication .side-navigation .list-group{
 	font-size:14px;
-
 }
+
+#publication .side-navigation ul.list-group{
+	margin-bottom:0;
+}
+
+#publication .side-navigation .list-group-item {
+	border-radius: 0;
+	border-bottom: none;
+}
+
+#publication .side-navigation>.list-group{
+	border-bottom: 1px solid #dddddd ;
+}
+
+#publication .side-navigation .list-group-item:hover{
+	text-decoration: none;
+	color: #555555;
+	background-color: #f5f5f5;
+	cursor: pointer;
+}
+
 
 
 #content-area .btns-tab li.active a.btn {
