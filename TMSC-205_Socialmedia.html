@@ -731,7 +731,7 @@
 <script type="text/javascript">
     $(document).ready(function () {
 					//YOUTUBEのV3 API KEYが必要
-        			jQuery.getJSON( 'https://www.googleapis.com/youtube/v3/search?key=AIzaSyAf3wFxNLMNLUU4lnUu9doBVMvg2ZVC4jo&channelId=UCIhADTRbjgRGZyMMXHPp_uw&part=snippet,id&order=date&maxResults=4' )
+        			jQuery.getJSON( 'https://www.googleapis.com/youtube/v3/search?key=AIzaSyDuCJpqLn6OKNFL0L09NBEzlQqlBNfVGKE&channelId=UCIhADTRbjgRGZyMMXHPp_uw&part=snippet,id&order=date&maxResults=4' )
 						.done( function ( data ) {
 
 							var html = Mustache.render(
@@ -752,14 +752,27 @@
 								$('#rss-feed').append('<p>記事がありません。</p>');
 								return false;
 							}
+							var itemArr = [];
 							$('item', data).each(function(i) {
-								if(i>3){ return false;}
 								var item = $(this);
-								var link = $('link', item).text();
-								var title = $('title', item).text();
-								
-								$('#rss-feed').append('<p><a class="inline-link" href="'+link+'"><i class="zmdi zmdi-rss"></i>&nbsp;'+title+'</a></p>');
+								itemArr[i] = {}
+								itemArr[i].title = $('title', item).text();
+								itemArr[i].link = $('link', item).text();
+								itemArr[i].guid = $('guid', item).text().replace( '-', '' );
+							
+						
 							})
+							
+							itemArr.sort(function(a,b){
+								if(a.guid>b.guid) return -1;
+								if(a.guid < b.guid) return 1;
+								return 0;
+							});
+							for (var i = 0; i < 4; i++) {
+								var link = itemArr[i].link;
+								var title = itemArr[i].title;
+								$('#rss-feed').append('<p><a class="inline-link" href="'+link+'"><i class="zmdi zmdi-rss"></i>&nbsp;'+title+'</a></p>');
+							}
 							
 						}
 					});
