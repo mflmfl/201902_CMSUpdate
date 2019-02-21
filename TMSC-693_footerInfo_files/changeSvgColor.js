@@ -4,7 +4,6 @@ $(document).ready(function() {
         var imgURL = $img.attr('src');
         var attributes = $img.prop("attributes");
         var fillColor = $img.data("changecolor");
-		console.log(fillColor)
 		
         $.get(imgURL, function(data) {
             // Get the SVG tag, ignore the rest
